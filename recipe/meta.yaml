@@ -1,4 +1,4 @@
-{% set version = '0.3-14' %}
+{% set version = "0.3-16" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/adespatial_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/adespatial/adespatial_{{ version }}.tar.gz
-  sha256: a2ef7549c1ed7a23651716c633b25eaff468af8ccbf2e9fcd164e485984cbfbf
+  sha256: 987bd6e0bc6a32ac8e678338ffbbd88580007c4916129b51da681c331818a821
 
 build:
-  merge_build_host: True  # [win]
-  skip: True  # [win]
+  merge_build_host: true  # [win]
+  skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -64,13 +64,10 @@ test:
 about:
   home: https://CRAN.R-project.org/package=adespatial
   license: GPL-2.0-or-later
-  summary: Tools for the multiscale spatial analysis of multivariate data. Several methods are
-    based on the use of a spatial weighting matrix and its eigenvector decomposition (Moran's
-    Eigenvectors Maps, MEM). Several approaches are described in the review Dray et al (2012)
-    <doi:10.1890/11-1183.1>.
+  summary: Tools for the multiscale spatial analysis of multivariate data. Several methods are based on the use of a spatial weighting matrix and its eigenvector decomposition (Moran's Eigenvectors Maps, MEM). Several approaches are described in the review Dray et al (2012) <doi:10.1890/11-1183.1>.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
