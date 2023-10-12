@@ -3,6 +3,7 @@ About r-adespatial-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-adespatial-feedstock/blob/main/LICENSE.txt)
 
+
 About r-adespatial
 ------------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=adespatial
 Package license: GPL-2.0-or-later
 
 Summary: Tools for the multiscale spatial analysis of multivariate data. Several methods are based on the use of a spatial weighting matrix and its eigenvector decomposition (Moran's Eigenvectors Maps, MEM). Several approaches are described in the review Dray et al (2012) <doi:10.1890/11-1183.1>.
+
 About r-adespatial
 ------------------
 
