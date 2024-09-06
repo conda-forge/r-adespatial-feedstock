@@ -1,4 +1,4 @@
-{% set version = "0.3-23" %}
+{% set version = "0.3-24" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/adespatial_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/adespatial/adespatial_{{ version }}.tar.gz
-  sha256: 70e0878b13212f9c450bf1e2bd1c5be87a1e24fed942941855a8dd2dd0c05f33
+  sha256: 1e2d10de8ddddc2d05855ebd83bb8f8c193365e88c86370f07c34ab3e0a83253
 
 build:
   merge_build_host: true  # [win]
@@ -23,7 +23,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
