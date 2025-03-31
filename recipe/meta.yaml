@@ -1,4 +1,4 @@
-{% set version = "0.3-26" %}
+{% set version = "0.3-27" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/adespatial_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/adespatial/adespatial_{{ version }}.tar.gz
-  sha256: d95956582a2cf3e286c9a3bd4b1958ffa7af20bc218b014476d52c40425d0b2e
+  sha256: a2108f5302db5cabcd27076c1f6178efce0d3a503a694b877f6f0ba376cfd282
 
 build:
   number: 0
