@@ -1,18 +1,18 @@
-{% set version = "0.3-28" %}
+{% set version = "0.3-29" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-adespatial
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/adespatial_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/adespatial/adespatial_{{ version }}.tar.gz
-  sha256: 564548c44eedee7b8820d0b8729524719acba4dea73f549918dcc13dc312a299
+  sha256: 24311ef6220bb1c48ca0b537c70623f064658b7790438a5e637770c25504fe67
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,27 +37,27 @@ requirements:
     - {{ posix }}zip                   # [win]
   host:
     - r-base
+    - r-mass
     - r-ade4 >=1.7_13
     - r-adegraphics
     - r-adephylo
+    - r-lattice
+    - r-shiny
     - r-sp
     - r-spdep
-    - r-lattice
-    - r-mass
-    - r-shiny
     - r-vegan
     - libblas
     - liblapack
   run:
     - r-base
+    - r-mass
     - r-ade4 >=1.7_13
     - r-adegraphics
     - r-adephylo
+    - r-lattice
+    - r-shiny
     - r-sp
     - r-spdep
-    - r-lattice
-    - r-mass
-    - r-shiny
     - r-vegan
 
 test:
